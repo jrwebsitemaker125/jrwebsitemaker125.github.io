@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text Box Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #response {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enter Something</h1>
+    <input type="text" id="userInput" placeholder="Type here...">
+    <button onclick="showResponse()">Submit</button>
+
+    <div id="response"></div>
+
+    <script>
+        function showResponse() {
+            let text = document.getElementById("userInput").value;
+            document.getElementById("response").innerText = "You typed: " + text;
+        }
+    </script>
+
+</body>
+</html>
